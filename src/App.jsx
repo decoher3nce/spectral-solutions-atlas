@@ -4,96 +4,96 @@ const DATA_SOURCES = [
   {
     category: "Multispectral Optical",
     sources: [
-      { name: "Landsat 8/9", bands: "11 bands", res: "15-100m", revisit: "8 days", provider: "USGS/NASA", gee: true, key: "VNIR, SWIR, Thermal" },
-      { name: "Sentinel-2A/B", bands: "13 bands", res: "10-60m", revisit: "5 days", provider: "ESA/Copernicus", gee: true, key: "VNIR, Red Edge, SWIR" },
-      { name: "MODIS (Terra/Aqua)", bands: "36 bands", res: "250m-1km", revisit: "1-2 days", provider: "NASA", gee: true, key: "Vis-TIR, Ocean color" },
-      { name: "VIIRS", bands: "22 bands", res: "375-750m", revisit: "Daily", provider: "NOAA", gee: true, key: "Vis-TIR, Day/Night Band" },
-      { name: "ASTER", bands: "14 bands", res: "15-90m", revisit: "16 days", provider: "NASA/METI", gee: true, key: "VNIR, SWIR, TIR" },
-      { name: "Planet SuperDove", bands: "8 bands", res: "3m", revisit: "Daily", provider: "Planet Labs", gee: false, key: "Vis, Red Edge, NIR" },
-      { name: "Maxar WorldView-3", bands: "29 bands", res: "0.31m pan", revisit: "1 day", provider: "Maxar", gee: false, key: "VNIR, SWIR, CAVIS" },
+      { name: "Landsat 8/9", bands: "11 bands", res: "15-100m", revisit: "8 days", provider: "USGS/NASA", gee: true, free: true, key: "VNIR, SWIR, Thermal" },
+      { name: "Sentinel-2A/B", bands: "13 bands", res: "10-60m", revisit: "5 days", provider: "ESA/Copernicus", gee: true, free: true, key: "VNIR, Red Edge, SWIR" },
+      { name: "MODIS (Terra/Aqua)", bands: "36 bands", res: "250m-1km", revisit: "1-2 days", provider: "NASA", gee: true, free: true, key: "Vis-TIR, Ocean color" },
+      { name: "VIIRS", bands: "22 bands", res: "375-750m", revisit: "Daily", provider: "NOAA", gee: true, free: true, key: "Vis-TIR, Day/Night Band" },
+      { name: "ASTER", bands: "14 bands", res: "15-90m", revisit: "16 days", provider: "NASA/METI", gee: true, free: true, key: "VNIR, SWIR, TIR" },
+      { name: "Planet SuperDove", bands: "8 bands", res: "3m", revisit: "Daily", provider: "Planet Labs", gee: false, free: false, key: "Vis, Red Edge, NIR" },
+      { name: "Maxar WorldView-3", bands: "29 bands", res: "0.31m pan", revisit: "1 day", provider: "Maxar", gee: false, free: false, key: "VNIR, SWIR, CAVIS" },
     ]
   },
   {
     category: "Hyperspectral",
     sources: [
-      { name: "EnMAP", bands: "242 bands", res: "30m", revisit: "27 days", provider: "DLR (Germany)", gee: false, key: "420-2450nm continuous" },
-      { name: "PRISMA", bands: "240 bands", res: "30m", revisit: "29 days", provider: "ASI (Italy)", gee: false, key: "400-2500nm, VNIR+SWIR" },
-      { name: "Planet Tanager-1", bands: "400+ bands", res: "30m", revisit: "Tasking", provider: "Planet/JPL", gee: false, key: "400-2500nm, CH₄/CO₂ detection" },
-      { name: "Pixxel Firefly (6 sats)", bands: "150+ bands", res: "5m", revisit: "24-48hr", provider: "Pixxel", gee: false, key: "VNIR-SWIR, 5m HSI" },
-      { name: "Wyvern Dragonette", bands: "120+ bands", res: "5m", revisit: "Tasking", provider: "Wyvern", gee: false, key: "400-1000nm" },
-      { name: "Kuva Space Hyperfield", bands: "200+ bands", res: "25-50m", revisit: "Daily target", provider: "Kuva Space", gee: false, key: "Onboard AI processing" },
-      { name: "DESIS (ISS)", bands: "235 bands", res: "30m", revisit: "Variable", provider: "DLR/Teledyne", gee: false, key: "400-1000nm VNIR" },
-      { name: "CHIME (upcoming)", bands: "200+ bands", res: "20-30m", revisit: "10-12 days", provider: "ESA Copernicus", gee: false, key: "400-2500nm, operational 2028+" },
-      { name: "SBG (upcoming)", bands: "200+ bands", res: "30m", revisit: "16 days", provider: "NASA", gee: false, key: "VSWIR + TIR, Surface Biology" },
-      { name: "AVIRIS-NG (airborne)", bands: "424 bands", res: "0.3-4m", revisit: "Campaign", provider: "NASA/JPL", gee: false, key: "380-2510nm, airborne HSI" },
+      { name: "EnMAP", bands: "242 bands", res: "30m", revisit: "27 days", provider: "DLR (Germany)", gee: false, free: true, key: "420-2450nm continuous" },
+      { name: "PRISMA", bands: "240 bands", res: "30m", revisit: "29 days", provider: "ASI (Italy)", gee: false, free: true, key: "400-2500nm, VNIR+SWIR" },
+      { name: "Planet Tanager-1", bands: "400+ bands", res: "30m", revisit: "Tasking", provider: "Planet/JPL", gee: false, free: false, key: "400-2500nm, CH₄/CO₂ detection" },
+      { name: "Pixxel Firefly (6 sats)", bands: "150+ bands", res: "5m", revisit: "24-48hr", provider: "Pixxel", gee: false, free: false, key: "VNIR-SWIR, 5m HSI" },
+      { name: "Wyvern Dragonette", bands: "120+ bands", res: "5m", revisit: "Tasking", provider: "Wyvern", gee: false, free: false, key: "400-1000nm" },
+      { name: "Kuva Space Hyperfield", bands: "200+ bands", res: "25-50m", revisit: "Daily target", provider: "Kuva Space", gee: false, free: false, key: "Onboard AI processing" },
+      { name: "DESIS (ISS)", bands: "235 bands", res: "30m", revisit: "Variable", provider: "DLR/Teledyne", gee: false, free: true, key: "400-1000nm VNIR" },
+      { name: "CHIME (upcoming)", bands: "200+ bands", res: "20-30m", revisit: "10-12 days", provider: "ESA Copernicus", gee: false, free: true, key: "400-2500nm, operational 2028+" },
+      { name: "SBG (upcoming)", bands: "200+ bands", res: "30m", revisit: "16 days", provider: "NASA", gee: false, free: true, key: "VSWIR + TIR, Surface Biology" },
+      { name: "AVIRIS-NG (airborne)", bands: "424 bands", res: "0.3-4m", revisit: "Campaign", provider: "NASA/JPL", gee: false, free: true, key: "380-2510nm, airborne HSI" },
     ]
   },
   {
     category: "SAR / Radar",
     sources: [
-      { name: "Sentinel-1", bands: "C-band", res: "5-20m", revisit: "6 days", provider: "ESA", gee: true, key: "C-band SAR, all-weather" },
-      { name: "ALOS-2 PALSAR-2", bands: "L-band", res: "1-100m", revisit: "14 days", provider: "JAXA", gee: true, key: "L-band, forest penetration" },
-      { name: "ICEYE", bands: "X-band", res: "<1m", revisit: "<24hr", provider: "ICEYE", gee: false, key: "X-band SAR constellation" },
-      { name: "Capella Space", bands: "X-band", res: "0.3m", revisit: "<1hr", provider: "Capella", gee: false, key: "Highest-res commercial SAR" },
-      { name: "Umbra", bands: "X-band", res: "0.16m", revisit: "Tasking", provider: "Umbra", gee: false, key: "Open data, ultra-high res" },
-      { name: "NISAR (2025+)", bands: "L+S band", res: "3-10m", revisit: "12 days", provider: "NASA/ISRO", gee: false, key: "Dual-band InSAR, deformation" },
+      { name: "Sentinel-1", bands: "C-band", res: "5-20m", revisit: "6 days", provider: "ESA", gee: true, free: true, key: "C-band SAR, all-weather" },
+      { name: "ALOS-2 PALSAR-2", bands: "L-band", res: "1-100m", revisit: "14 days", provider: "JAXA", gee: true, free: true, key: "L-band, forest penetration" },
+      { name: "ICEYE", bands: "X-band", res: "<1m", revisit: "<24hr", provider: "ICEYE", gee: false, free: false, key: "X-band SAR constellation" },
+      { name: "Capella Space", bands: "X-band", res: "0.3m", revisit: "<1hr", provider: "Capella", gee: false, free: false, key: "Highest-res commercial SAR" },
+      { name: "Umbra", bands: "X-band", res: "0.16m", revisit: "Tasking", provider: "Umbra", gee: false, free: true, key: "Open data, ultra-high res" },
+      { name: "NISAR (2025+)", bands: "L+S band", res: "3-10m", revisit: "12 days", provider: "NASA/ISRO", gee: false, free: true, key: "Dual-band InSAR, deformation" },
     ]
   },
   {
     category: "LiDAR / Elevation",
     sources: [
-      { name: "GEDI (ISS)", bands: "1064nm laser", res: "25m footprint", revisit: "Variable", provider: "NASA", gee: true, key: "Forest canopy height, biomass" },
-      { name: "ICESat-2/ATLAS", bands: "532nm photon", res: "11m footprint", revisit: "91 days", provider: "NASA", gee: true, key: "Ice sheets, sea level, canopy" },
-      { name: "USGS 3DEP", bands: "Airborne LiDAR", res: "0.5-2m", revisit: "Baseline", provider: "USGS", gee: false, key: "Complete US topo, 2026 baseline" },
-      { name: "Copernicus DEM GLO-30", bands: "TanDEM-X derived", res: "30m", revisit: "Static", provider: "ESA/DLR", gee: true, key: "Global DSM" },
+      { name: "GEDI (ISS)", bands: "1064nm laser", res: "25m footprint", revisit: "Variable", provider: "NASA", gee: true, free: true, key: "Forest canopy height, biomass" },
+      { name: "ICESat-2/ATLAS", bands: "532nm photon", res: "11m footprint", revisit: "91 days", provider: "NASA", gee: true, free: true, key: "Ice sheets, sea level, canopy" },
+      { name: "USGS 3DEP", bands: "Airborne LiDAR", res: "0.5-2m", revisit: "Baseline", provider: "USGS", gee: false, free: true, key: "Complete US topo, 2026 baseline" },
+      { name: "Copernicus DEM GLO-30", bands: "TanDEM-X derived", res: "30m", revisit: "Static", provider: "ESA/DLR", gee: true, free: true, key: "Global DSM" },
     ]
   },
   {
     category: "Atmospheric / GHG",
     sources: [
-      { name: "Sentinel-5P/TROPOMI", bands: "UV-SWIR spectrometer", res: "5.5x3.5km", revisit: "Daily", provider: "ESA", gee: true, key: "NO₂, CH₄, CO, O₃, SO₂" },
-      { name: "OCO-2/3", bands: "NIR+SWIR", res: "1.3x2.3km", revisit: "16 days", provider: "NASA", gee: false, key: "Column CO₂" },
-      { name: "GHGSat", bands: "SWIR spectrometer", res: "25m", revisit: "Tasking", provider: "GHGSat", gee: false, key: "Point-source CH₄ at 25m" },
-      { name: "MethaneSAT", bands: "SWIR spectrometer", res: "100x400m", revisit: "Weekly regions", provider: "EDF", gee: false, key: "Area-wide CH₄ emissions" },
-      { name: "CAMS (Copernicus)", bands: "Modeled/assimilated", res: "~40km", revisit: "Daily", provider: "ECMWF", gee: true, key: "Aerosol, reactive gases, GHG" },
-      { name: "EarthCARE/ATLID", bands: "UV HSRL lidar", res: "~100m vert", revisit: "25 days", provider: "ESA/JAXA", gee: false, key: "Aerosol profiles, dust tracking" },
+      { name: "Sentinel-5P/TROPOMI", bands: "UV-SWIR spectrometer", res: "5.5x3.5km", revisit: "Daily", provider: "ESA", gee: true, free: true, key: "NO₂, CH₄, CO, O₃, SO₂" },
+      { name: "OCO-2/3", bands: "NIR+SWIR", res: "1.3x2.3km", revisit: "16 days", provider: "NASA", gee: false, free: true, key: "Column CO₂" },
+      { name: "GHGSat", bands: "SWIR spectrometer", res: "25m", revisit: "Tasking", provider: "GHGSat", gee: false, free: false, key: "Point-source CH₄ at 25m" },
+      { name: "MethaneSAT", bands: "SWIR spectrometer", res: "100x400m", revisit: "Weekly regions", provider: "EDF", gee: false, free: true, key: "Area-wide CH₄ emissions" },
+      { name: "CAMS (Copernicus)", bands: "Modeled/assimilated", res: "~40km", revisit: "Daily", provider: "ECMWF", gee: true, free: true, key: "Aerosol, reactive gases, GHG" },
+      { name: "EarthCARE/ATLID", bands: "UV HSRL lidar", res: "~100m vert", revisit: "25 days", provider: "ESA/JAXA", gee: false, free: true, key: "Aerosol profiles, dust tracking" },
     ]
   },
   {
     category: "Thermal / Nighttime",
     sources: [
-      { name: "ECOSTRESS (ISS)", bands: "5 TIR bands", res: "38x69m", revisit: "Variable", provider: "NASA/JPL", gee: true, key: "Plant evapotranspiration stress" },
-      { name: "LSTM (upcoming)", bands: "TIR spectrometer", res: "50m", revisit: "1-3 days", provider: "ESA Copernicus", gee: false, key: "Land surface temp, 2028+" },
-      { name: "VIIRS Day/Night Band", bands: "500-900nm", res: "750m", revisit: "Daily", provider: "NOAA", gee: true, key: "Nighttime lights, fire" },
-      { name: "Landsat TIRS", bands: "2 TIR bands", res: "100m", revisit: "16 days", provider: "USGS", gee: true, key: "Land surface temperature" },
+      { name: "ECOSTRESS (ISS)", bands: "5 TIR bands", res: "38x69m", revisit: "Variable", provider: "NASA/JPL", gee: true, free: true, key: "Plant evapotranspiration stress" },
+      { name: "LSTM (upcoming)", bands: "TIR spectrometer", res: "50m", revisit: "1-3 days", provider: "ESA Copernicus", gee: false, free: true, key: "Land surface temp, 2028+" },
+      { name: "VIIRS Day/Night Band", bands: "500-900nm", res: "750m", revisit: "Daily", provider: "NOAA", gee: true, free: true, key: "Nighttime lights, fire" },
+      { name: "Landsat TIRS", bands: "2 TIR bands", res: "100m", revisit: "16 days", provider: "USGS", gee: true, free: true, key: "Land surface temperature" },
     ]
   },
   {
     category: "Ocean / Water",
     sources: [
-      { name: "Sentinel-3 OLCI", bands: "21 bands", res: "300m", revisit: "<2 days", provider: "ESA", gee: true, key: "Ocean color, chlorophyll" },
-      { name: "PACE/OCI", bands: "200+ bands", res: "1km", revisit: "1-2 days", provider: "NASA", gee: false, key: "Hyperspectral ocean color" },
-      { name: "SWOT", bands: "Ka-band radar", res: "50-250m", revisit: "21 days", provider: "NASA/CNES", gee: false, key: "Surface water heights, ocean topo" },
-      { name: "Allen Coral Atlas", bands: "Sentinel-2 derived", res: "5m", revisit: "Static composite", provider: "Vulcan/UQ", gee: true, key: "Coral reef mapping" },
-      { name: "Global Fishing Watch", bands: "AIS + SAR fusion", res: "Varies", revisit: "Near-real-time", provider: "GFW", gee: true, key: "Vessel detection, dark fishing" },
+      { name: "Sentinel-3 OLCI", bands: "21 bands", res: "300m", revisit: "<2 days", provider: "ESA", gee: true, free: true, key: "Ocean color, chlorophyll" },
+      { name: "PACE/OCI", bands: "200+ bands", res: "1km", revisit: "1-2 days", provider: "NASA", gee: false, free: true, key: "Hyperspectral ocean color" },
+      { name: "SWOT", bands: "Ka-band radar", res: "50-250m", revisit: "21 days", provider: "NASA/CNES", gee: false, free: true, key: "Surface water heights, ocean topo" },
+      { name: "Allen Coral Atlas", bands: "Sentinel-2 derived", res: "5m", revisit: "Static composite", provider: "Vulcan/UQ", gee: true, free: true, key: "Coral reef mapping" },
+      { name: "Global Fishing Watch", bands: "AIS + SAR fusion", res: "Varies", revisit: "Near-real-time", provider: "GFW", gee: true, free: true, key: "Vessel detection, dark fishing" },
     ]
   },
   {
     category: "Gravity / Geodetic",
     sources: [
-      { name: "GRACE-FO", bands: "Microwave ranging", res: "~300km", revisit: "30 days", provider: "NASA/DLR", gee: true, key: "Mass change: water, ice, aquifers" },
-      { name: "GNSS Networks", bands: "L-band signals", res: "Point", revisit: "Continuous", provider: "IGS/Various", gee: false, key: "Crustal deformation, water vapor" },
+      { name: "GRACE-FO", bands: "Microwave ranging", res: "~300km", revisit: "30 days", provider: "NASA/DLR", gee: true, free: true, key: "Mass change: water, ice, aquifers" },
+      { name: "GNSS Networks", bands: "L-band signals", res: "Point", revisit: "Continuous", provider: "IGS/Various", gee: false, free: true, key: "Crustal deformation, water vapor" },
     ]
   },
   {
     category: "Derived / Fusion Products (GEE)",
     sources: [
-      { name: "Global Forest Change", bands: "Landsat-derived", res: "30m", revisit: "Annual", provider: "Hansen/UMD", gee: true, key: "Tree cover loss 2000-present" },
-      { name: "Dynamic World", bands: "Sentinel-2 derived", res: "10m", revisit: "~5 days", provider: "Google/WRI", gee: true, key: "Near-real-time land cover" },
-      { name: "CHIRPS Precipitation", bands: "IR + gauge fusion", res: "~5km", revisit: "Daily", provider: "UCSB CHC", gee: true, key: "40+ year rainfall archive" },
-      { name: "WorldPop", bands: "ML-estimated", res: "100m", revisit: "Annual", provider: "U Southampton", gee: true, key: "Population distribution" },
-      { name: "Global Human Modification", bands: "Multi-source", res: "1km", revisit: "Snapshot", provider: "CSP", gee: true, key: "Cumulative human impact 0-1" },
-      { name: "JRC Global Surface Water", bands: "Landsat-derived", res: "30m", revisit: "Monthly", provider: "EC JRC", gee: true, key: "32-year surface water dynamics" },
+      { name: "Global Forest Change", bands: "Landsat-derived", res: "30m", revisit: "Annual", provider: "Hansen/UMD", gee: true, free: true, key: "Tree cover loss 2000-present" },
+      { name: "Dynamic World", bands: "Sentinel-2 derived", res: "10m", revisit: "~5 days", provider: "Google/WRI", gee: true, free: true, key: "Near-real-time land cover" },
+      { name: "CHIRPS Precipitation", bands: "IR + gauge fusion", res: "~5km", revisit: "Daily", provider: "UCSB CHC", gee: true, free: true, key: "40+ year rainfall archive" },
+      { name: "WorldPop", bands: "ML-estimated", res: "100m", revisit: "Annual", provider: "U Southampton", gee: true, free: true, key: "Population distribution" },
+      { name: "Global Human Modification", bands: "Multi-source", res: "1km", revisit: "Snapshot", provider: "CSP", gee: true, free: true, key: "Cumulative human impact 0-1" },
+      { name: "JRC Global Surface Water", bands: "Landsat-derived", res: "30m", revisit: "Monthly", provider: "EC JRC", gee: true, free: true, key: "32-year surface water dynamics" },
     ]
   }
 ];
@@ -250,6 +250,27 @@ export default function SpectralSolutionsAtlas() {
   const [selectedSolution, setSelectedSolution] = useState(null);
   const [expandedCategory, setExpandedCategory] = useState(null);
   const [hoveredProblem, setHoveredProblem] = useState(null);
+  const [freeDataOnly, setFreeDataOnly] = useState(false);
+
+  const allSources = DATA_SOURCES.flatMap(c => c.sources);
+  const sourceIsFree = (name) => {
+    const s = allSources.find(src => src.name === name);
+    return s ? s.free : false;
+  };
+  const solutionFreeCount = (sol) => sol.dataSources.filter(sourceIsFree).length;
+  const solutionAllFree = (sol) => sol.dataSources.every(sourceIsFree);
+  const solutionFreeRatio = (sol) => solutionFreeCount(sol) / sol.dataSources.length;
+
+  const sortedSolutions = [...SOLUTIONS].sort((a, b) => {
+    if (freeDataOnly) {
+      const aFree = solutionAllFree(a);
+      const bFree = solutionAllFree(b);
+      if (aFree !== bFree) return bFree - aFree;
+      const ratioSort = solutionFreeRatio(b) - solutionFreeRatio(a);
+      if (Math.abs(ratioSort) > 0.01) return ratioSort;
+    }
+    return b.novelty - a.novelty;
+  });
 
   const tabs = [
     { id: "solutions", label: "Creative Solutions", icon: "◆" },
@@ -368,11 +389,37 @@ export default function SpectralSolutionsAtlas() {
         {/* ===== SOLUTIONS TAB ===== */}
         {activeTab === "solutions" && !selectedSolution && (
           <div style={{ animation: "fadeIn 0.4s ease" }}>
-            <div style={{ fontSize: 13, color: "#94a3b8", marginBottom: 20 }}>
-              10 extraordinary opportunities — ranked by novelty — where multi-sensor spectral fusion solves problems no single technology can address.
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 20, flexWrap: "wrap", gap: 12 }}>
+              <div style={{ fontSize: 13, color: "#94a3b8" }}>
+                10 extraordinary opportunities — ranked by {freeDataOnly ? "free data availability, then " : ""}novelty — where multi-sensor spectral fusion solves problems no single technology can address.
+              </div>
+              <button onClick={() => setFreeDataOnly(!freeDataOnly)} style={{
+                display: "flex", alignItems: "center", gap: 8,
+                padding: "8px 14px", borderRadius: 8,
+                border: freeDataOnly ? "1px solid #22c55e55" : "1px solid rgba(255,255,255,0.1)",
+                background: freeDataOnly ? "rgba(34,197,94,0.1)" : "rgba(255,255,255,0.03)",
+                color: freeDataOnly ? "#22c55e" : "#94a3b8",
+                fontSize: 12, fontWeight: 600, cursor: "pointer", fontFamily: "inherit",
+                transition: "all 0.2s ease", whiteSpace: "nowrap",
+              }}>
+                <div style={{
+                  width: 32, height: 18, borderRadius: 9, padding: 2,
+                  background: freeDataOnly ? "#22c55e" : "rgba(255,255,255,0.15)",
+                  transition: "background 0.2s ease",
+                  display: "flex", alignItems: "center",
+                  justifyContent: freeDataOnly ? "flex-end" : "flex-start",
+                }}>
+                  <div style={{
+                    width: 14, height: 14, borderRadius: "50%",
+                    background: "#fff",
+                    transition: "all 0.2s ease",
+                  }} />
+                </div>
+                Free data priority
+              </button>
             </div>
             <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
-              {SOLUTIONS.map((s, i) => (
+              {sortedSolutions.map((s, i) => (
                 <div key={s.id} className="solution-card" onClick={() => setSelectedSolution(s)}
                   style={{
                     background: "rgba(255,255,255,0.02)",
@@ -417,6 +464,13 @@ export default function SpectralSolutionsAtlas() {
                       {renderNoveltyDots(s.novelty)}
                       <div style={{ fontSize: 10, color: "#64748b", marginTop: 8 }}>
                         {s.dataSources.length} sensors fused
+                      </div>
+                      <div style={{ fontSize: 10, marginTop: 6, display: "flex", alignItems: "center", gap: 4, justifyContent: "flex-end" }}>
+                        {solutionAllFree(s) ? (
+                          <span style={{ color: "#22c55e", backgroundColor: "rgba(34,197,94,0.1)", border: "1px solid #22c55e44", padding: "1px 8px", borderRadius: 3, fontWeight: 600 }}>ALL FREE</span>
+                        ) : (
+                          <span style={{ color: "#f59e0b" }}>{solutionFreeCount(s)}/{s.dataSources.length} free</span>
+                        )}
                       </div>
                     </div>
                   </div>
@@ -464,16 +518,31 @@ export default function SpectralSolutionsAtlas() {
                 </div>
               </div>
 
-              <div style={{ fontSize: 10, color: "#64748b", marginBottom: 6 }}>SENSOR FUSION STACK</div>
+              <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 6 }}>
+                <span style={{ fontSize: 10, color: "#64748b" }}>SENSOR FUSION STACK</span>
+                {solutionAllFree(selectedSolution) ? (
+                  <span style={{ fontSize: 9, color: "#22c55e", backgroundColor: "rgba(34,197,94,0.1)", border: "1px solid #22c55e44", padding: "1px 8px", borderRadius: 3, fontWeight: 600 }}>ALL FREE DATA</span>
+                ) : (
+                  <span style={{ fontSize: 9, color: "#f59e0b" }}>{solutionFreeCount(selectedSolution)}/{selectedSolution.dataSources.length} free</span>
+                )}
+              </div>
               <div style={{ display: "flex", gap: 6, flexWrap: "wrap", marginBottom: 20 }}>
-                {selectedSolution.dataSources.map(ds => (
-                  <span key={ds} style={{
-                    fontSize: 11, padding: "4px 10px", borderRadius: 4,
-                    background: "rgba(255,255,255,0.06)", color: "#e2e8f0",
-                    border: "1px solid rgba(255,255,255,0.08)",
-                    fontFamily: "'Space Mono', monospace"
-                  }}>{ds}</span>
-                ))}
+                {selectedSolution.dataSources.map(ds => {
+                  const isFree = sourceIsFree(ds);
+                  return (
+                    <span key={ds} style={{
+                      fontSize: 11, padding: "4px 10px", borderRadius: 4,
+                      background: isFree ? "rgba(34,197,94,0.08)" : "rgba(245,158,11,0.08)",
+                      color: "#e2e8f0",
+                      border: isFree ? "1px solid rgba(34,197,94,0.2)" : "1px solid rgba(245,158,11,0.2)",
+                      fontFamily: "'Space Mono', monospace",
+                      display: "flex", alignItems: "center", gap: 6,
+                    }}>
+                      {ds}
+                      <span style={{ fontSize: 8, color: isFree ? "#22c55e" : "#f59e0b", fontWeight: 700 }}>{isFree ? "FREE" : "PAID"}</span>
+                    </span>
+                  );
+                })}
               </div>
             </div>
 
@@ -542,6 +611,7 @@ export default function SpectralSolutionsAtlas() {
                           <div>
                             <span style={{ fontSize: 13, fontWeight: 600, color: "#e2e8f0" }}>{s.name}</span>
                             {s.gee && <span style={{ fontSize: 9, color: "#22c55e", marginLeft: 8, padding: "1px 6px", borderRadius: 3, border: "1px solid #22c55e44", backgroundColor: "rgba(34,197,94,0.08)" }}>GEE</span>}
+                            <span style={{ fontSize: 9, marginLeft: 6, padding: "1px 6px", borderRadius: 3, color: s.free ? "#22c55e" : "#f59e0b", border: s.free ? "1px solid #22c55e44" : "1px solid #f59e0b44", backgroundColor: s.free ? "rgba(34,197,94,0.08)" : "rgba(245,158,11,0.08)" }}>{s.free ? "FREE" : "PAID"}</span>
                           </div>
                           <span style={{ fontFamily: "'Space Mono', monospace", fontSize: 10, color: "#64748b" }}>{s.provider}</span>
                         </div>

@@ -4,6 +4,8 @@
 
 An interactive atlas that maps 50+ Earth-observation and spectral data sources against 20 of the most urgent planetary-scale problems, then surfaces 50 creative, cross-sensor solutions that live at their intersection.
 
+**Live demo:** [spectral-solutions-atlas.onrender.com](https://spectral-solutions-atlas.onrender.com/) *(temporary)*
+
 Live explorer for the question: *what becomes possible when we fuse hyperspectral, SAR, LiDAR, thermal, gravimetric, and atmospheric sensing in ways no one has operationalized yet?*
 
 ## What's inside
